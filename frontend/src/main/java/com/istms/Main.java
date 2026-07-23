@@ -1,23 +1,23 @@
 package com.istms;
+
 import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
 
     @Override
     public void start(Stage stage) {
-        Button button = new Button("Click Me");
-        button.setOnAction(e -> button.setText("It works!"));
+        stage.setTitle("ISTMS - Satellite Tracking Mission Control System");
+        BootSplashScreen.play(stage, () -> showLogin(stage));
+    }
 
-        StackPane root = new StackPane(button);
-        Scene scene = new Scene(root, 400, 300);
-
-        stage.setTitle("ISTMS - Test Window");
-        stage.setScene(scene);
-        stage.show();
+    private void showLogin(Stage stage) {
+        javafx.scene.control.Label label = new javafx.scene.control.Label("LOGIN SCREEN PLACEHOLDER");
+        label.setStyle("-fx-text-fill: #39ff88; -fx-font-size: 28px;");
+        javafx.scene.layout.StackPane root = new javafx.scene.layout.StackPane(label);
+        root.setStyle("-fx-background-color: #0a0e14;");
+        javafx.scene.Scene loginScene = new javafx.scene.Scene(root);
+        stage.setScene(loginScene);
     }
 
     public static void main(String[] args) {

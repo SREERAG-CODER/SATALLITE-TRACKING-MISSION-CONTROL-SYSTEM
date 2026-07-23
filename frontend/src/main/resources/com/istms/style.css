@@ -1,0 +1,32 @@
+﻿.root {
+    -fx-background-color: #0a0e14;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.splash-root {
+    -fx-background-color: #0a0e14;
+}
+
+.splash-title {
+    -fx-text-fill: #39ff88;
+    -fx-font-size: 42px;
+    -fx-font-weight: bold;
+}
+
+.splash-subtitle {
+    -fx-text-fill: #7c8ba1;
+    -fx-font-size: 14px;
+}
+
+.splash-status {
+    -fx-text-fill: #dbe6f0;
+    -fx-font-size: 12px;
+}
+
+.splash-progress .bar {
+    -fx-background-color: #39ff88;
+}
+
+.splash-progress .track {
+    -fx-background-color: #1c2632;
+}
