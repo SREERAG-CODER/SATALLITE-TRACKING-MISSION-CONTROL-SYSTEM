@@ -32,6 +32,10 @@
                 <version>0.0.8</version>
                 <configuration>
                     <mainClass>com.istms.app.ISTMSApplication</mainClass>
+                    <options>
+                        <option>-Xms128m</option>
+                        <option>-Xmx256m</option>
+                    </options>
                 </configuration>
             </plugin>
         </plugins>

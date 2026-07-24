@@ -24,6 +24,13 @@ public class ISTMSApplication extends Application {
         
         LoginView loginView = new LoginView(screenBounds.getWidth(), screenBounds.getHeight());
         SceneManager.getInstance().setScene(loginView);
+        
+        // ESC to exit fullscreen app
+        primaryStage.getScene().setOnKeyPressed(event -> {
+            if (event.getCode() == javafx.scene.input.KeyCode.ESCAPE) {
+                javafx.application.Platform.exit();
+            }
+        });
     }
 
     public static void main(String[] args) {
