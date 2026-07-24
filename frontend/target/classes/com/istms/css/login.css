@@ -1,0 +1,125 @@
+@import "global.css";
+
+.login-root {
+    -fx-background-color: #020611;
+}
+
+.login-card {
+    -fx-background-color: rgb(27, 25, 25);
+    /* Glassmorphism background */
+    -fx-border-color: rgb(255, 255, 255);
+    /* Subtle blue border */
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 30;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 30, 0, 0, 10);
+}
+
+.login-title {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 30px;
+    -fx-font-weight: 800;
+    -fx-padding: 5px;
+    -fx-font-family: "Bahnschrift", Arial, sans-serif;
+    -fx-letter-spacing: 2px;
+}
+
+.login-logo {
+    -fx-padding: 0 0 10 0;
+}
+
+.utc-clock {
+    -fx-text-fill: rgba(255, 255, 255, 0.7);
+    -fx-font-family: "Consolas", "Courier New", monospace;
+    -fx-font-size: 11px;
+    -fx-letter-spacing: 1px;
+}
+
+/* Input Box Styling */
+.input-box {
+    -fx-background-color: rgba(255, 255, 255, 0.03);
+    -fx-border-color: rgba(77, 166, 255, 0.2);
+    -fx-border-width: 0 0 2 0;
+    -fx-padding: 8 12;
+}
+
+.input-box.focused {
+    -fx-background-color: rgba(255, 153, 51, 0.05);
+    -fx-border-color: #FF9933;
+    /* Saffron highlight on focus */
+}
+
+.input-icon {
+    -fx-fill: rgba(77, 166, 255, 0.6);
+}
+
+.input-box.focused .input-icon {
+    -fx-fill: #FF9933;
+}
+
+.login-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.3);
+    -fx-font-family: "Consolas", "Courier New", monospace;
+    -fx-font-size: 14px;
+}
+
+.login-field:focused {
+    /* Focus handled by parent HBox border */
+}
+
+/* Options */
+.login-check {
+    -fx-text-fill: rgba(255, 255, 255, 0.7);
+    -fx-font-family: "Consolas", "Courier New", monospace;
+    -fx-font-size: 12px;
+}
+
+.login-link {
+    -fx-text-fill: #4DA6FF;
+    -fx-font-family: "Consolas", "Courier New", monospace;
+    -fx-font-size: 12px;
+    -fx-border-color: transparent;
+}
+
+.login-link:hover {
+    -fx-text-fill: #FF9933;
+    -fx-underline: true;
+}
+
+/* Main Action Button */
+.login-button {
+    -fx-background-color: linear-gradient(to right, rgba(169, 159, 149, 0.2), rgba(169, 159, 149, 0.1));
+    -fx-text-fill: #928ea4;
+    -fx-border-color: #e7d2c7;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 4;
+    -fx-padding: 12 20;
+    -fx-font-weight: bold;
+    -fx-font-family: "Consolas", "Courier New", monospace;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-letter-spacing: 1px;
+}
+
+.login-button:hover {
+    -fx-background-color: linear-gradient(to right, rgba(169, 159, 149, 0.3), rgba(169, 159, 149, 0.2));
+    -fx-effect: dropshadow(gaussian, rgba(197, 187, 177, 0.4), 15, 0, 0, 0);
+}
+
+.login-button:pressed {
+    -fx-background-color: rgba(169, 159, 149, 0.2);
+    -fx-translate-y: 1;
+}
+
+/* Footer */
+.login-footer {
+    -fx-text-fill: rgba(255, 255, 255, 0.555);
+    -fx-font-size: 11px;
+    -fx-text-alignment: center;
+    -fx-padding: 5 0 0 0;
+    -fx-font-family: "Consolas", "Courier New", monospace;
+}

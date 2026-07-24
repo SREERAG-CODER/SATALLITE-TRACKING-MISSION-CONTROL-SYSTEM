@@ -1,0 +1,109 @@
+@import "global.css";
+
+.body-root {
+    -fx-background-color: transparent;
+    -fx-font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    -fx-padding: 20 3% 20 3%;
+    /* We don't have absolute position the same way, but VBox/HBox layout handles this */
+}
+
+.logo {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 160px;
+    -fx-cursor: hand;
+    -fx-background-radius: 30;
+}
+
+/* Navigation List */
+.navlist {
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-border-color: rgb(62, 62, 62);
+    -fx-padding: 5 5;
+    -fx-background-color: #000000;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-spacing: 5;
+}
+
+.nav-item {
+    -fx-text-fill: rgb(108, 108, 108);
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-font-family: 'Courier New', Courier, monospace;
+    -fx-padding: 10 15 10 15;
+    -fx-cursor: hand;
+    -fx-background-radius: 7;
+}
+
+.nav-item:hover {
+    -fx-background-color: #FF7D1D;
+    -fx-text-fill: rgb(255, 255, 255);
+    -fx-font-weight: normal;
+    /* transition: .3s is handled natively or via simple css hover in JavaFX */
+}
+
+/* Cube Button */
+.cubebtn {
+    -fx-text-fill: aliceblue;
+    -fx-border-style: solid;
+    -fx-border-width: 2;
+    -fx-border-color: #edc85b;
+    -fx-background-color: rgb(0, 0, 0);
+    -fx-padding: 12 30;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-font-weight: normal;
+    -fx-font-size: 15px;
+    -fx-pref-width: 120px;
+    -fx-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    -fx-cursor: hand;
+    /* JavaFX handles scaling via ScaleTransition or -fx-scale-x/-y but CSS scaling is limited on hover.
+       We will use CSS -fx-scale for hover */
+}
+
+.cubebtn:hover {
+    -fx-text-fill: #535151;
+    -fx-border-color: #FF7D1D;
+    -fx-background-color: #FF7D1D;
+    -fx-font-weight: bold;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+/* Hero Section */
+.section1 {
+    -fx-padding: 10% 0 0 0; /* margin-top 20% approximation */
+}
+
+.hero-h1 {
+    -fx-font-family: Arial, Helvetica, sans-serif;
+    -fx-font-weight: normal;
+    -fx-font-size: 50px;
+    -fx-text-fill: rgb(178, 162, 140);
+    -fx-alignment: center;
+}
+
+.hero-span {
+    -fx-font-family: 'Courier New', Courier, monospace;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FF7D1D;
+    -fx-alignment: center;
+}
+
+.hero-p {
+    -fx-font-family: Arial, Helvetica, sans-serif;
+    -fx-font-weight: normal;
+    -fx-font-size: 20px;
+    -fx-text-fill: rgba(188, 188, 187, 0.52);
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-padding: 20 0 0 0; /* margin-top 2% */
+}

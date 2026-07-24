@@ -31,7 +31,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>com.istms.Main</mainClass>
+                    <mainClass>com.istms.app.ISTMSApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
