@@ -53,6 +53,7 @@ public class LoginView extends StackPane {
         
         Label istmsTitle = new Label("ISTMS");
         istmsTitle.getStyleClass().add("login-title");
+        VBox.setMargin(istmsTitle, new Insets(-25, 0, 10, 0)); // Reduce space between logo and title
 
         // Username Field with Icon
         HBox userBox = createInputBox("M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z", "Personnel ID", false);
