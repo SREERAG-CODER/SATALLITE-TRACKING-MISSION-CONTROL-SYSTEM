@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PasswordGenerator",
+            "request": "launch",
+            "mainClass": "com.istms.backend.util.PasswordGenerator",
+            "projectName": "istms-backend"
+        },
+        {
+            "type": "java",
+            "name": "IstmsBackendApplication",
+            "request": "launch",
+            "mainClass": "com.istms.backend.IstmsBackendApplication",
+            "projectName": "istms-backend"
+        },
+        {
+            "type": "java",
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "Main",

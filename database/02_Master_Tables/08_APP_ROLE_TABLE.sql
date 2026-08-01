@@ -89,6 +89,13 @@ ADD CONSTRAINT CHK_APP_ROLE_ACTIVE
 CHECK (IS_ACTIVE IN ('Y','N'));
 
 ---------------------------------------------------------
+-- Foreign Key Index
+---------------------------------------------------------
+
+CREATE INDEX IDX_APP_ROLE_DEPARTMENT
+ON APP_ROLE(DEPARTMENT_ID);
+
+---------------------------------------------------------
 -- Completion Message
 ---------------------------------------------------------
 

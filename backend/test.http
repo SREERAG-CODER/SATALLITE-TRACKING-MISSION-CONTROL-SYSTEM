@@ -1,0 +1,9 @@
+### Login Request
+
+POST http://localhost:9090/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin123"
+}

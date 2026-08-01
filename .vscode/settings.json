@@ -2,5 +2,6 @@
     "java.project.referencedLibraries": [
         "C:/Tools/javafx-sdk-26.0.2/lib/*.jar"
     ],
-    "css.lint.unknownProperties": "ignore"
+    "css.lint.unknownProperties": "ignore",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

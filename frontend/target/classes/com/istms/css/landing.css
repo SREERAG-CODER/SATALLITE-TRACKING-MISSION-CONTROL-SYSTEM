@@ -16,7 +16,7 @@
     -fx-font-size: 24px;
     -fx-font-weight: bold;
     -fx-pref-width: 160px;
-    -fx-cursor: hand;
+
     -fx-background-radius: 30;
 }
 
@@ -38,7 +38,7 @@
     -fx-font-size: 15px;
     -fx-font-family: 'Courier New', Courier, monospace;
     -fx-padding: 10 15 10 15;
-    -fx-cursor: hand;
+
     -fx-background-radius: 7;
 }
 
@@ -63,7 +63,7 @@
     -fx-font-size: 15px;
     -fx-pref-width: 120px;
     -fx-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    -fx-cursor: hand;
+
     /* JavaFX handles scaling via ScaleTransition or -fx-scale-x/-y but CSS scaling is limited on hover.
        We will use CSS -fx-scale for hover */
 }

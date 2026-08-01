@@ -36,7 +36,7 @@ END;
 CREATE TABLE USER_APP_ROLE
 (
     USER_ID         NUMBER(10)      NOT NULL,
-    ROLE_ID         NUMBER(10)      NOT NULL,
+    APP_ROLE_ID     NUMBER(10)      NOT NULL,
     IS_ACTIVE       CHAR(1)         DEFAULT 'Y' NOT NULL,
     CREATED_AT      TIMESTAMP       DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
@@ -50,7 +50,7 @@ ADD CONSTRAINT PK_USER_APP_ROLE
 PRIMARY KEY
 (
     USER_ID,
-    ROLE_ID
+    APP_ROLE_ID
 );
 
 ---------------------------------------------------------
@@ -63,9 +63,9 @@ FOREIGN KEY (USER_ID)
 REFERENCES APP_USER (USER_ID);
 
 ALTER TABLE USER_APP_ROLE
-ADD CONSTRAINT FK_USER_APP_ROLE_ROLE
-FOREIGN KEY (ROLE_ID)
-REFERENCES APP_ROLE (ROLE_ID);
+ADD CONSTRAINT FK_USER_APP_ROLE_APP_ROLE
+FOREIGN KEY (APP_ROLE_ID)
+REFERENCES APP_ROLE (APP_ROLE_ID);
 
 ---------------------------------------------------------
 -- Check Constraint
@@ -79,8 +79,8 @@ CHECK (IS_ACTIVE IN ('Y','N'));
 -- Index
 ---------------------------------------------------------
 
-CREATE INDEX IDX_USER_APP_ROLE_ROLE
-ON USER_APP_ROLE(ROLE_ID);
+CREATE INDEX IDX_USER_APP_ROLE_APP_ROLE
+ON USER_APP_ROLE(APP_ROLE_ID);
 
 ---------------------------------------------------------
 -- Comments
@@ -92,7 +92,7 @@ COMMENT ON TABLE USER_APP_ROLE IS
 COMMENT ON COLUMN USER_APP_ROLE.USER_ID IS
 'References the application user.';
 
-COMMENT ON COLUMN USER_APP_ROLE.ROLE_ID IS
+COMMENT ON COLUMN USER_APP_ROLE.APP_ROLE_ID IS
 'References the assigned application role.';
 
 COMMENT ON COLUMN USER_APP_ROLE.IS_ACTIVE IS
@@ -108,81 +108,96 @@ COMMENT ON COLUMN USER_APP_ROLE.CREATED_AT IS
 INSERT INTO USER_APP_ROLE
 (
     USER_ID,
-    ROLE_ID
+    APP_ROLE_ID
 )
 VALUES
 (
-    (SELECT USER_ID
-     FROM APP_USER
-     WHERE USERNAME = 'admin'),
-
-    (SELECT ROLE_ID
-     FROM APP_ROLE
-     WHERE ROLE_CODE = 'ADMIN')
+    (
+        SELECT USER_ID
+        FROM APP_USER
+        WHERE USERNAME = 'admin'
+    ),
+    (
+        SELECT APP_ROLE_ID
+        FROM APP_ROLE
+        WHERE APP_ROLE_CODE = 'SYS_ADMIN'
+    )
 );
 
 INSERT INTO USER_APP_ROLE
 (
     USER_ID,
-    ROLE_ID
+    APP_ROLE_ID
 )
 VALUES
 (
-    (SELECT USER_ID
-     FROM APP_USER
-     WHERE USERNAME = 'mission_controller'),
-
-    (SELECT ROLE_ID
-     FROM APP_ROLE
-     WHERE ROLE_CODE = 'MISSION_CONTROLLER')
+    (
+        SELECT USER_ID
+        FROM APP_USER
+        WHERE USERNAME = 'mission_controller'
+    ),
+    (
+        SELECT APP_ROLE_ID
+        FROM APP_ROLE
+        WHERE APP_ROLE_CODE = 'MISSION_DIR'
+    )
 );
 
 INSERT INTO USER_APP_ROLE
 (
     USER_ID,
-    ROLE_ID
+    APP_ROLE_ID
 )
 VALUES
 (
-    (SELECT USER_ID
-     FROM APP_USER
-     WHERE USERNAME = 'sat_engineer'),
-
-    (SELECT ROLE_ID
-     FROM APP_ROLE
-     WHERE ROLE_CODE = 'ENGINEER')
+    (
+        SELECT USER_ID
+        FROM APP_USER
+        WHERE USERNAME = 'sat_engineer'
+    ),
+    (
+        SELECT APP_ROLE_ID
+        FROM APP_ROLE
+        WHERE APP_ROLE_CODE = 'SAT_ENGINEER'
+    )
 );
 
 INSERT INTO USER_APP_ROLE
 (
     USER_ID,
-    ROLE_ID
+    APP_ROLE_ID
 )
 VALUES
 (
-    (SELECT USER_ID
-     FROM APP_USER
-     WHERE USERNAME = 'telemetry_analyst'),
-
-    (SELECT ROLE_ID
-     FROM APP_ROLE
-     WHERE ROLE_CODE = 'ANALYST')
+    (
+        SELECT USER_ID
+        FROM APP_USER
+        WHERE USERNAME = 'telemetry_analyst'
+    ),
+    (
+        SELECT APP_ROLE_ID
+        FROM APP_ROLE
+        WHERE APP_ROLE_CODE = 'TELE_ENGINEER'
+    )
 );
 
 INSERT INTO USER_APP_ROLE
 (
     USER_ID,
-    ROLE_ID
+    APP_ROLE_ID
 )
 VALUES
 (
-    (SELECT USER_ID
-     FROM APP_USER
-     WHERE USERNAME = 'ai_analyst'),
-
-    (SELECT ROLE_ID
-     FROM APP_ROLE
-     WHERE ROLE_CODE = 'ANALYST')
+    (
+        SELECT USER_ID
+        FROM APP_USER
+        WHERE USERNAME = 'ai_analyst'
+    ),
+    (
+        SELECT APP_ROLE_ID
+        FROM APP_ROLE
+        WHERE APP_ROLE_CODE = 'AI_SPECIALIST'
+    )
 );
 
 COMMIT;
@@ -195,19 +210,21 @@ DESC USER_APP_ROLE;
 
 SELECT *
 FROM USER_APP_ROLE
-ORDER BY USER_ID, ROLE_ID;
+ORDER BY USER_ID,
+         APP_ROLE_ID;
 
 SELECT
     AU.USERNAME,
-    AR.ROLE_NAME,
+    AR.APP_ROLE_NAME,
     UAR.IS_ACTIVE
 FROM USER_APP_ROLE UAR
 JOIN APP_USER AU
 ON UAR.USER_ID = AU.USER_ID
 JOIN APP_ROLE AR
-ON UAR.ROLE_ID = AR.ROLE_ID
-ORDER BY AU.USERNAME,
-         AR.ROLE_NAME;
+ON UAR.APP_ROLE_ID = AR.APP_ROLE_ID
+ORDER BY
+    AU.USERNAME,
+    AR.APP_ROLE_NAME;
 
 ---------------------------------------------------------
 -- Completion Message

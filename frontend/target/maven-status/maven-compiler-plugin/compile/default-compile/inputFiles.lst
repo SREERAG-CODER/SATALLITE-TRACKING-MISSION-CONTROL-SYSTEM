@@ -1,6 +1,11 @@
 C:\Users\SREERAG\OneDrive\Documents\PROJECTS\Satallite Tracking & Mission Control System\frontend\src\main\java\com\istms\app\ISTMSApplication.java
 C:\Users\SREERAG\OneDrive\Documents\PROJECTS\Satallite Tracking & Mission Control System\frontend\src\main\java\com\istms\config\ThemeConstants.java
+C:\Users\SREERAG\OneDrive\Documents\PROJECTS\Satallite Tracking & Mission Control System\frontend\src\main\java\com\istms\service\AuthClient.java
 C:\Users\SREERAG\OneDrive\Documents\PROJECTS\Satallite Tracking & Mission Control System\frontend\src\main\java\com\istms\service\BootSequenceService.java
+C:\Users\SREERAG\OneDrive\Documents\PROJECTS\Satallite Tracking & Mission Control System\frontend\src\main\java\com\istms\service\model\LoginRequest.java
+C:\Users\SREERAG\OneDrive\Documents\PROJECTS\Satallite Tracking & Mission Control System\frontend\src\main\java\com\istms\service\model\LoginResponse.java
+C:\Users\SREERAG\OneDrive\Documents\PROJECTS\Satallite Tracking & Mission Control System\frontend\src\main\java\com\istms\service\UserSession.java
+C:\Users\SREERAG\OneDrive\Documents\PROJECTS\Satallite Tracking & Mission Control System\frontend\src\main\java\com\istms\ui\auth\AnimatedPopup.java
 C:\Users\SREERAG\OneDrive\Documents\PROJECTS\Satallite Tracking & Mission Control System\frontend\src\main\java\com\istms\ui\auth\LoginView.java
 C:\Users\SREERAG\OneDrive\Documents\PROJECTS\Satallite Tracking & Mission Control System\frontend\src\main\java\com\istms\ui\SceneManager.java
 C:\Users\SREERAG\OneDrive\Documents\PROJECTS\Satallite Tracking & Mission Control System\frontend\src\main\java\com\istms\ui\ScrollingBackgroundPane.java

@@ -1,4 +1,4 @@
-04_DEPARTMENT_INDEX.sql
+
 /*
 =========================================================
 Project       : Satellite Mission Control System

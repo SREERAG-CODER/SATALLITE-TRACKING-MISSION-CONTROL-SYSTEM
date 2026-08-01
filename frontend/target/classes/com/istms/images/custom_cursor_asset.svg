@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="48" height="48">
+  <!-- Hotspot tip near top-left at (6, 6) -->
+  <g transform="translate(24, 28) rotate(-28)">
+    <!-- Extra-Rounded Soft Pointer Body with subtle border for visibility -->
+    <path fill="#FFFFFF" d="
+      M -3.5, -24
+      C -2, -30 2, -30 3.5, -24
+      L 14, 1
+      C 17.5, 6 14, 11 9, 9
+      L 6.5, 7.5
+      A 6.5 6.5 0 0 0 -6.5 7.5
+      L -9, 9
+      C -14, 11 -17.5, 6 -14, 1
+      Z
+    " stroke="#0f172a" stroke-width="1.2" stroke-linejoin="round"/>
+
+    <!-- 100% Perfectly Centered Circle Dot (cx=0) -->
+    <circle cx="0" cy="16.5" r="5" fill="#FFFFFF" stroke="#0f172a" stroke-width="1.2"/>
+  </g>
+</svg>

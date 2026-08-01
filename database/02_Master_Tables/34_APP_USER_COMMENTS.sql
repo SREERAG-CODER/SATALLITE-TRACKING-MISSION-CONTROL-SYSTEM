@@ -58,7 +58,7 @@ COMMENT ON COLUMN APP_USER.PROFILE_IMAGE_URL IS
 'Path or URL of the user profile image.';
 
 COMMENT ON COLUMN APP_USER.LAST_LOGIN IS
-'Timestamp of the user's most recent successful login.';
+'Timestamp of the user''s most recent successful login.';
 
 COMMENT ON COLUMN APP_USER.IS_ACTIVE IS
 'Indicates whether the user account is active (Y) or inactive (N).';
